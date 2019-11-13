@@ -1,0 +1,12 @@
+<h1 class="header text-center">This shows a list of all your Resteraunts</h1>
+
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-6-6">
+      <% @restaurants.each do |restaurant| %>
+        <%= link_to restaurant.name, restaurant_path(restaurant.id) %>
+        <p><%= restaurant.address %></p>
+      <% end %>
+    </div>
+  </div>
+</div>
